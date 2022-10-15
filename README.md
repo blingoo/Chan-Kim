@@ -1,1 +1,1 @@
-# Chan-Kim
+# Chan Kim portfolio website
