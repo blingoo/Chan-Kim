@@ -195,12 +195,12 @@ input, select, textarea {
 			opacity: 1;
 		}
 	}
-
+/* Animation for diagnol line and initial flashbang */
 	#wrapper {
-		-moz-animation: wrapper 3s forwards;
-		-webkit-animation: wrapper 3s forwards;
-		-ms-animation: wrapper 3s forwards;
-		animation: wrapper 3s forwards;
+		-moz-animation: wrapper 0.75s forwards;
+		-webkit-animation: wrapper 0.75s forwards;
+		-ms-animation: wrapper 0.75s forwards;
+		animation: wrapper 0.75s forwards;
 		height: 100%;
 		left: 0;
 		opacity: 0;
@@ -209,7 +209,7 @@ input, select, textarea {
 		width: 100%;
 	}
 
-/* BG */
+/* BG scrolling speed? */
 
 	#bg {
 		-moz-animation: bg 60s linear infinite;
@@ -347,10 +347,10 @@ input, select, textarea {
 	}
 
 	#overlay {
-		-moz-animation: overlay 1.5s 1.5s forwards;
-		-webkit-animation: overlay 1.5s 1.5s forwards;
-		-ms-animation: overlay 1.5s 1.5s forwards;
-		animation: overlay 1.5s 1.5s forwards;
+		-moz-animation: overlay 1.5s 0.5s forwards;
+		-webkit-animation: overlay 1.5s 0.5s forwards;
+		-ms-animation: overlay 1.5s 0.5s forwards;
+		animation: overlay 1.5s 0.5s forwards;
 		background-attachment: fixed, fixed;
 		background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
 		background-position: top left, center center;
@@ -529,12 +529,15 @@ input, select, textarea {
 			opacity: 1;
 		}
 	}
-
+/* the name and the subtext animation speed
+	first number is the duration of animation
+	second number is when the animation begins
+*/
 	#header {
-		-moz-animation: header 1s 2.25s forwards;
-		-webkit-animation: header 1s 2.25s forwards;
-		-ms-animation: header 1s 2.25s forwards;
-		animation: header 1s 2.25s forwards;
+		-moz-animation: header 1.5s 0.8s forwards;
+		-webkit-animation: header 1.5s 0.8s forwards;
+		-ms-animation: header 1.5s 0.8s forwards;
+		animation: header 1.5s 0.8s forwards;
 		-moz-backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
@@ -591,75 +594,92 @@ input, select, textarea {
 				top: 0;
 				width: 5.35em;
 			}
+/*
+	Custom animation speed for button lists
+*/
+:root{
+	--animationlistspeed: 1s;
+	--anispeeddif: 0.25s;
+	--ani1: calc(var(--animationlistspeed) + var(--anispeeddif));
+	--ani2: calc(var(--ani1) + var(--anispeeddif));
+	--ani3: calc(var(--ani2) + var(--anispeeddif));
+	--ani4: calc(var(--ani3) + var(--anispeeddif));
+	--ani5: calc(var(--ani4) + var(--anispeeddif));
+	--ani6: calc(var(--ani5) + var(--anispeeddif));
+	--ani7: calc(var(--ani6) + var(--anispeeddif));
+	--ani8: calc(var(--ani7) + var(--anispeeddif));
+	--ani9: calc(var(--ani8) + var(--anispeeddif));
+	--ani10: calc(var(--ani9) + var(--anispeeddif));
+}
 
 				#header nav li:nth-child(1) {
-					-moz-animation-delay: 2.5s;
-					-webkit-animation-delay: 2.5s;
-					-ms-animation-delay: 2.5s;
-					animation-delay: 2.5s;
+					-moz-animation-delay: var(--ani1);
+					-webkit-animation-delay: var(--ani1);
+					-ms-animation-delay: var(--ani1);
+					animation-delay: var(--ani1);
 				}
 
 				#header nav li:nth-child(2) {
-					-moz-animation-delay: 2.75s;
-					-webkit-animation-delay: 2.75s;
-					-ms-animation-delay: 2.75s;
-					animation-delay: 2.75s;
+					-moz-animation-delay: var(--ani2);
+					-webkit-animation-delay: var(--ani2);
+					-ms-animation-delay: var(--ani2);
+					animation-delay: var(--ani2);
 				}
 
 				#header nav li:nth-child(3) {
-					-moz-animation-delay: 3s;
-					-webkit-animation-delay: 3s;
-					-ms-animation-delay: 3s;
-					animation-delay: 3s;
+					-moz-animation-delay: var(--ani3);
+					-webkit-animation-delay: var(--ani3);
+					-ms-animation-delay: var(--ani3);
+					animation-delay: var(--ani3);
 				}
 
 				#header nav li:nth-child(4) {
-					-moz-animation-delay: 3.25s;
-					-webkit-animation-delay: 3.25s;
-					-ms-animation-delay: 3.25s;
-					animation-delay: 3.25s;
+					-moz-animation-delay: var(--ani4);
+					-webkit-animation-delay: var(--ani4);
+					-ms-animation-delay: var(--ani4);
+					animation-delay: var(--ani4);
 				}
 
 				#header nav li:nth-child(5) {
-					-moz-animation-delay: 3.5s;
-					-webkit-animation-delay: 3.5s;
-					-ms-animation-delay: 3.5s;
-					animation-delay: 3.5s;
+					-moz-animation-delay: var(--ani5);
+					-webkit-animation-delay: var(--ani5);
+					-ms-animation-delay: var(--ani5);
+					animation-delay: var(--ani5);
 				}
 
 				#header nav li:nth-child(6) {
-					-moz-animation-delay: 3.75s;
-					-webkit-animation-delay: 3.75s;
-					-ms-animation-delay: 3.75s;
-					animation-delay: 3.75s;
+					-moz-animation-delay: var(--ani6);
+					-webkit-animation-delay: var(--ani6);
+					-ms-animation-delay: var(--ani6);
+					animation-delay: var(--ani6);
 				}
 
 				#header nav li:nth-child(7) {
-					-moz-animation-delay: 4s;
-					-webkit-animation-delay: 4s;
-					-ms-animation-delay: 4s;
-					animation-delay: 4s;
+					-moz-animation-delay: var(--ani7);
+					-webkit-animation-delay: var(--ani7);
+					-ms-animation-delay: var(--ani7);
+					animation-delay: var(--ani7);
 				}
 
 				#header nav li:nth-child(8) {
-					-moz-animation-delay: 4.25s;
-					-webkit-animation-delay: 4.25s;
-					-ms-animation-delay: 4.25s;
-					animation-delay: 4.25s;
+					-moz-animation-delay: var(--ani8);
+					-webkit-animation-delay: var(--ani8);
+					-ms-animation-delay: var(--ani8);
+					animation-delay: var(--ani8);
 				}
 
 				#header nav li:nth-child(9) {
-					-moz-animation-delay: 4.5s;
-					-webkit-animation-delay: 4.5s;
-					-ms-animation-delay: 4.5s;
-					animation-delay: 4.5s;
+					-moz-animation-delay: var(--ani9);
+					-webkit-animation-delay: var(--ani9);
+					-ms-animation-delay: var(--ani9);
+					animation-delay: var(--ani9);
 				}
 
 				#header nav li:nth-child(10) {
-					-moz-animation-delay: 4.75s;
-					-webkit-animation-delay: 4.75s;
-					-ms-animation-delay: 4.75s;
-					animation-delay: 4.75s;
+					-moz-animation-delay: var(--ani10);
+					-webkit-animation-delay: var(--ani10);
+					-ms-animation-delay: var(--ani10);
+					animation-delay: var(--ani10);
 				}
 
 			#header nav a {
